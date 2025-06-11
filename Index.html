@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USDTGrow - Secure Investment</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1b1b2f);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: white;
+    }@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+header {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px lime;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 1rem 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  background: #00ffcc;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+nav a:hover {
+  background: white;
+  color: #000;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+section {
+  display: none;
+  padding: 2rem;
+}
+
+section.active {
+  display: block;
+  animation: fade 0.6s ease-in;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.usdt-logo {
+  width: 80px;
+  height: 80px;
+  animation: rotate 6s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+.card h3 {
+  color: #00ffcc;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="usdt-logo">
+    <h1>USDTGrow Investment Platform</h1>
+  </header>  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('register')">Register</a>
+    <a href="#" onclick="showPage('login')">Login</a>
+    <a href="#" onclick="showPage('dashboard')">Dashboard</a>
+    <a href="#" onclick="showPage('deposit')">Deposit</a>
+    <a href="#" onclick="showPage('withdraw')">Withdraw</a>
+    <a href="#" onclick="showPage('referral')">Referral</a>
+    <a href="#" onclick="showPage('about')">About Us</a>
+  </nav>  <section id="home" class="active">
+    <div class="card">
+      <h3>Welcome to USDTGrow</h3>
+      <p>
+        This platform is built for smart investors like you. Make a deposit in USDT (TRC20/BEP20), earn daily profits, and grow your network through referrals. Fully manual system, no automation — we believe in transparency.
+      </p>
+    </div>
+  </section>  <section id="register">
+    <div class="card">
+      <h3>Register</h3>
+      <input placeholder="Your Name">
+      <input placeholder="Email">
+      <input placeholder="Wallet Address">
+      <input type="password" placeholder="Password">
+    </div>
+  </section>  <section id="login">
+    <div class="card">
+      <h3>Login</h3>
+      <input placeholder="Email">
+      <input type="password" placeholder="Password">
+    </div>
+  </section>  <section id="dashboard">
+    <div class="card">
+      <h3>Dashboard</h3>
+      <p>Name: Noor Ullah</p>
+      <p>Balance: $0.00</p>
+      <p>Referral Income: $0.00</p>
+    </div>
+  </section>  <section id="deposit">
+    <div class="card">
+      <h3>Deposit</h3>
+      <p>Send USDT to the following address:</p>
+      <p style="color: #00ffcc; font-weight: bold;">0xC01169a3AbEfAC6DE3692514E85Db07b4E432048</p>
+      <input type="number" placeholder="Amount ($)">
+      <input type="file">
+    </div>
+  </section>  <section id="withdraw">
+    <div class="card">
+      <h3>Withdraw</h3>
+      <input placeholder="Enter amount ($)">
+      <input placeholder="Your USDT Wallet Address">
+    </div>
+  </section>  <section id="referral">
+    <div class="card">
+      <h3>Referral Link</h3>
+      <p>Your referral link:</p>
+      <input value="https://usdtgrow.com/?ref=NoorUllah" readonly>
+      <p>Earn 10% from every direct referral.</p>
+    </div>
+  </section>  <section id="about">
+    <div class="card">
+      <h3>About USDTGrow</h3>
+      <p>
+        ✅ 100% Transparent Manual System<br>
+        ✅ Minimum Deposit: $5 (USDT)<br>
+        ✅ Referral Income: 10% Direct<br>
+        ✅ Withdrawal Processing Time: 12 Hours<br>
+        ✅ Profits Are Calculated Daily<br>
+        ✅ Safe, Secure & Community Driven<br>
+      </p>
+    </div>
+  </section>  <script>
+    function showPage(id) {
+      document.querySelectorAll('section').forEach((section) => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script></body>
+</html>
